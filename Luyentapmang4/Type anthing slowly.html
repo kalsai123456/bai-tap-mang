@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type anthing slowly</title>
+</head>
+<body>
+
+  <textarea name="textare" id="textare" cols="30" rows="10" onkeydown="setTextArea()"></textarea>
+
+  <script>
+    let chuoi = 'HOW OLD ARE YOU'
+    let str = ''
+    let arr = chuoi.split("")
+
+    function setTextArea (){
+    let input = document.getElementById("textare").value
+
+    if(input.length >0){
+        for (let i = 0; i < input.length; i++) {
+            str += arr[i]
+            if( i === 15){
+                str = ''
+                input = ''
+            }
+        }
+        document.getElementById("textare").value = str
+        str = ''
+    }
+
+      // let doDai= input.length;
+      // if (doDai >0){
+      //   for (let i = 0; i < doDai; i++) {
+      //     cuPhap += chuoi[i-1]
+      //     console.log(chuoi[i-1])
+      //     if (i === 16){
+      //       cuPhap = ''
+      //       document.f.textare.value = ''
+      //     }
+      //   }
+      //   document.f.textare.value = cuPhap
+      //   cuPhap = ''
+        // let stime = setTimeout('setTextArea()',100)
+      // }
+    }
+  </script>
+</body>
+</html>

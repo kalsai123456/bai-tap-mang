@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>co ca ro</title>
+</head>
+<body>
+<p id="caro"></p>
+<input type="button" value="Thay Đổi" onclick="changer()">
+<script>
+    let co = document.getElementById('caro')
+    let banco = []
+    let data = ''
+    for (let i = 0; i < 5; i++) {
+        banco[i] = Array('(.)','(.)','(.)','(.)','(.)')
+    }
+    for (let i = 0; i < banco.length; i++) {
+        data += '<br>'
+        for (let j = 0; j < banco[i].length; j++) {
+            data += banco[i][j] + '&ensp;'
+        }
+    }
+    co.innerHTML = data
+    function changer(){
+        let dong,cot
+        dong = +prompt('nhap dong thay doi cua x' )
+        cot = +prompt(' nhap cot thay doi cua y'  )
+        data = ''
+        banco[dong][cot] = 'x'
+        for (let i = 0; i < banco.length; i++) {
+            data += '<br>'
+            for (let j = 0; j < banco[i].length; j++) {
+            data += banco[i][j] + ''
+            }
+        }
+    }
+    co.innerHTML = data
+</script>
+</body>
+</html>
