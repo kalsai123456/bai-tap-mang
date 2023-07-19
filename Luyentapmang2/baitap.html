@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mang</title>
+</head>
+<body>
+    <input type="text" id="tieng_anh">
+    <input type="button" value="Dich" onclick="dich()">
+    <p id="tieng_viet"></p>
+    <script>
+      let tieng_anh = document.getElementById("tieng_anh")
+      console.log(tieng_anh.value)
+      let mangTA = ["how", "old", "are", "you", "i", "am", "fine", "thanks"]
+      let mangTV = ["làm sao", "cũ, cổ xưa", "là", "bạn", "tôi", "là", "khỏe", "cảm ơn"]
+
+      let count =0
+      function dich() {
+        for (let i=0; i < mangTA.length; i++) {
+          if (mangTA[i] === tieng_anh.value) {
+            count = 0
+            document.getElementById("tieng_viet").innerHTML = mangTV[i]
+            break;
+          }else{
+            count++
+          }
+        }
+        if(count !== 0){
+          alert("Không có dữ liệu")
+        }
+      }
+
+    </script>
+</body>
+</html>
