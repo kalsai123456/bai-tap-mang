@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+  <script>
+     let chuoi = prompt('Nhap vao 1 chuoi: ')
+     let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+     let chuThuong = 'abcdefghiklmnopqrstuvwxyz'
+     let ketQua = []
+     for (let i = 0; i < chuoi.length ; i++) {
+       if(chuHoa.indexOf(chuoi[i]) !== -1){
+         ketQua.push(chuoi[i].toLowerCase())
+       } else if (chuThuong.indexOf(chuoi[i]) !== -1){
+         ketQua.push(chuoi[i].toUpperCase())
+       } else {
+         ketQua.push(chuoi[i])
+       }
+     }
+     alert(ketQua.join(''))
+  </script>
+</body>
+</html>

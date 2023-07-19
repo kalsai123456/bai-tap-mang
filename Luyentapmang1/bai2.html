@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+    <script>
+        let daySo = prompt(" Nhap vao day so ")
+        let mang = [daySo[0]]
+
+        document.write( 'Day so gom: ' + daySo + '<br>')
+        for(let i=1; i < daySo.length; i++){
+            if(daySo[i-1] %2 === 0 && daySo[i] %2 === 0){
+                mang.push("-" , daySo[i])
+            } else {
+                mang.push(daySo[i])
+            }
+        }
+        document.write(mang.join(''))
+
+    </script>
+</body>
+</html>
